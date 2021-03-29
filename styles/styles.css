@@ -1,0 +1,448 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+body{
+   background: rgb(245,238,222);
+}
+
+@font-face {
+   font-family: "Open-sans";
+   src: url("../font/ProximaNovaT-Thin.ttf");
+ }
+
+ @font-face {
+   font-family: "Open-sans-ok";
+   src: url("../font/OpenSans-Regular.ttf");
+ }
+
+
+@font-face{
+   font-family: "raleway";
+   src: url("../font/Raleway-Italic-VariableFont_wght.ttf")
+}
+
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap');
+
+
+
+ /* ========================================================================================= 
+    ============================================= HOME ======================================
+    ========================================================================================= */
+ .header{
+   width: 100%;
+   height: 30vh;
+   background: rgb(64,161,179);
+}
+
+.nav-container {
+   /* background: yellow; */
+   height: 5vh;
+   display: flex;
+   justify-content: center;
+}
+
+.header-nav {
+   /* background: green; */
+   width: 40vw;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.header-nav a {
+   color: black;  
+   text-decoration: none;
+   font-size: 20px;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.header-nav a:hover {
+   background: green;
+   padding: 5px 10px;
+}
+
+.header-tittle-container {
+   height: 100%;
+   /* background: red; */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.header-tittle {
+   /* text-decoration: underline; */
+   font-family: 'Montserrat', sans-serif;
+   font-size: 50px;
+}
+
+.header-slogan {
+   font-family: 'Lilita One', cursive;
+      font-size: 30px;
+}
+
+
+.img-container {
+   /* width: 100%;
+   background: url('../img/perros-jugando-juguetes.jpg') no-repeat ;
+   background-size: cover;
+   height: 100vh; */
+}
+
+
+
+/* INFO CARDS */
+.infoCards-section {
+   width: 100%;
+   height: 30vh;
+   background: rgb(224, 222, 183);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.infoCards-container {
+   /* background: yellow; */
+   width: 65vw;
+   height: 20vh;
+   /* margin: auto auto; */
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+}
+
+.info-card {
+   width: 15vw;
+   height: 12vh;
+   background: rgb(220,0,27);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+.img-card-container{
+   /* background: green; */
+   height: 37% ;
+}
+
+.home-card-img{
+   height: 100%;
+   display: block;
+   margin: 0 auto;
+}
+
+.infoCard-text1 {
+   color: white;
+   font-size: 16px;
+   font-family: "Open-sans-ok";
+
+}
+
+.infoCard-text2 {
+   color: white;
+   font-size: 13px;
+   font-family: "Open-sans-ok";
+}
+
+
+
+
+
+/* MAIN SECTION */
+
+.para-hacer-espacio{
+   width: 100%;
+   height: 150vh;
+   background:rgb(245,238,222);
+}
+
+.presentation-container {
+   width: 55vw;
+   height: 120vh;
+   margin-top: 20vh;
+   margin-left: 10vw;
+   /* margin: 0 auto; */
+   position: relative;
+   /* border: 1px solid black; */
+   /* background: rgb(61, 50, 58); */
+}
+
+.whoWeAre-block{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 30vw;
+   height: 20vh;
+   background: rgb(230,187,213);
+   position: absolute;
+   right: 0;
+   /* margin-top: 0px; */
+}
+
+.who-we-are {
+   font-size: 50px;
+}
+
+.sub-presentation-container {
+   /* border: 1px solid black; */
+   display: flex;
+   justify-content: space-around;
+   /* align-items: center; */
+}
+
+.presentation-image{
+   margin-top: 8vh;
+   z-index: 1;
+}
+
+.presentation-text-container {
+   /* background: green; */
+   font-family:  "Calibri" ;
+   display: flex;
+   font-size: 35px;
+   /* justify-content: center; */
+   align-items: center;
+   /* margin-top: 200px; */
+   width: 20vw;
+
+}
+
+
+
+/* HOME FOOTER */
+
+.footer{
+   width: 100%;
+   height: 40vh;
+   background: rgb(170,161,37);
+}
+
+.footer-main {
+   /* background: red; */
+   width: 40vw;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between ;
+   align-items: center;
+   margin: 0 auto;
+
+}
+
+.flecha-icon {
+   width: 100px;
+}
+
+.socialMedia-container{
+   /* background: green; */
+   text-align: center;
+   width: 30vw;
+}
+
+.socialMedia-tittle {
+   font-size: 50px ;
+   font-family: 'Raleway', sans-serif;
+}
+
+.footer-nav a{
+   text-decoration: none;   
+}
+
+.footer-nav a img{
+   width: 40px;
+}
+
+
+
+
+
+
+ /* ========================================================================================= 
+    ============================================= FARMACIA | JUGUETERIA =====================
+    ========================================================================================= */
+
+
+.card-container {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.card {
+   width: 224px;
+   height: 320px;
+   border-bottom: 1px solid rgb(187, 186, 186);
+   display: flex;
+   flex-direction: column;
+   margin: 10px;
+   transition: all .2s ease;
+   position: relative;
+   border-radius: 5px;
+   /* background: rgb(199, 199, 199); */
+}
+
+.card:hover {
+   cursor: pointer;
+   height: 350px;
+   box-shadow: 0px 10px 20px rgb(126, 126, 126);
+}
+
+.carrito-icon-container {
+   display: none;
+   width: 35px;
+   height: 35px;
+   position: absolute;
+   top: 10px;
+   right: 4px;
+   /* display: flex; */
+   justify-content: center;
+   align-items: center;
+   border-radius: 100%;
+   border: 2px solid grey;
+   transition: all .2s ease;
+}
+
+.carrito-icon-container:hover{
+   background: grey;
+}
+
+.carrito-icon {
+   width: 24px;
+   /* display: none; */
+}
+
+.info-icon-container {
+   display: none;
+   width: 35px;
+   height: 35px;
+   border-radius: 100%;
+   border: 2px solid grey;
+   position: absolute;
+   top: 10px;
+   left: 4px;
+   transition: all .2s ease;
+}
+
+.info-icon-container:hover {
+   background: grey;
+}
+
+.info-icon {
+   margin-left: 14px;
+   margin-top: 2px;
+   height: 20px;
+   font-size: 27px;
+}
+
+
+
+.sub-card {
+   margin-top: 5%;
+   display: flex;
+   flex-direction: column;
+}
+
+.img {
+   width: 100%;
+}
+
+.text-container {
+   height: 15%;
+   display: flex;
+   flex-direction: column;
+   width: 80%;
+   margin: 0 10%;
+   /* background: green; */
+   position: relative;
+}
+
+.previous-price {
+   text-decoration: line-through;
+   display: none;
+   color: grey;
+   font-family: "Open-sans";
+   font-size: 14px;
+   font-weight: bold;
+   position: absolute;
+}
+
+.price-container {
+   margin-top: 15px;
+   display: flex;
+   align-items: center;
+   width: 80%;
+   font-family: "Open-sans";
+   width: 100%;
+}
+
+.price {
+   font-size: 24px;
+   color: black;
+   font-family: "Open-sans";
+   font-weight: bold;
+}
+
+.discount {
+   color:#39b54a;
+   margin-left: 10%;
+   font-size: 15px;
+   font-weight: bold;
+}
+
+.last-units {
+   margin-top: 5px;
+   font-size: 15px;
+   font-family: "Open-sans";
+   color: black;
+   background: rgb(255, 41, 41);
+   border-radius: 4px;
+   margin-left: 4px;
+   width: 48%;
+   font-weight: bold;
+   text-align: center;
+   /* text-align: center; */
+}
+
+.product-name-container {
+   display: none;
+   font-size: 14px;
+   font-family: "Open-sans";
+   color: grey;
+   position: absolute;
+   bottom: -1px;
+   width: 100%;
+   padding: 8px 0;
+   text-align: center;
+   line-height: 15px;
+}
+
+.product-name {
+   font-weight: bold;
+}
+
+.display-none {
+   display: none;
+}
+
+
+
+
+
+ /* ========================================================================================= 
+    ============================================= CONTACT ===================================
+    ========================================================================================= */
+
+.hola {
+   width: 20px;
+   height: 20px;
+   background: green;
+}
+
+
+
+
+
+
