@@ -40,6 +40,7 @@ fetch('https://apipetshop.herokuapp.com/api/articulos')
 })   
 .catch((error) => {console.log(error)})
 
+// .
 let nuevoCard = ''
 function crearCard (element){      
       let cardBorder = document.createElement('div')

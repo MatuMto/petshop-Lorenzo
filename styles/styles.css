@@ -604,7 +604,6 @@ body{
 }
 
 .left-form {
-   /* background: yellow; */
    display: flex;
    flex-direction: column;
 }
