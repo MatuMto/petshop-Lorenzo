@@ -1,0 +1,22 @@
+      #  nuevoCard.innerHTML = 
+      #  `  <div class="info-icon-container">
+      #        <img src="./icons/info.png" class="info-icon" id="infoIcon" alt="">
+      #     </div>
+      #     <div class="carrito-icon-container" id="carritoIconContainer">
+      #        <img src="./icons/carrito.png" class="carrito-icon" id="carritoIcon" alt="">
+      #     </div>
+
+      #     <div class="sub-card">
+      #        <img src="${element.imagen}" alt="">
+      #        <div class="text-container">
+      #           <p class="previous-price" id="previousPrice"><strong><del> $ 2.500</del></strong></p>
+      #           <div class="card-price-container" id="cardPriceContainer">
+      #              <p class="card-price"><strong>$ ${element.precio}</strong></p>
+      #              <p class="discount"><strong> 13% OFF</strong></p>
+      #           </div>
+      #           <p class"ninguna"><strong>Last Units!</strong></p>
+      #        </div>
+      #        <div class="product-name" id="productName">
+      #          <p><strong>Pelota interactiva de goma </strong></p>
+      #        </div>
+      #     </div>`

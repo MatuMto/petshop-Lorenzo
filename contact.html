@@ -11,16 +11,102 @@
 
 <body>
 
-   <form action="">
-      <input type="text" placeholder="Name" name="name" required>
-      <input type="text" placeholder="Last name" name="lastName">
-      <input type="email" placeholder="Mail" name="mail">
-      <input type="text" placeholder="Cat - Dog - etc.." name="kindOfPet">
-      <input type="text" placeholder="Pet Name" name="petName">
+   <header class="header">
+      <div class="nav-container">
+         <nav class="header-nav">
+            <a href="./home.html">Home</a>
+            <a href="./toyStore.html">Toy Store</a>
+            <a href="./pharmacy.html">Pharmacy</a>
+            <a href="./contact.html">Contact</a>
+         </nav>
+      </div>
 
-      <input type="submit" value="enviar">
+      <div class="header-tittle-container">
+         <p class="header-tittle">Franco's Petshop</p>
+         <!-- <p class="header-slogan">Your Pet, Our Passion </p> -->
+         <p class="header-slogan">Bringing Happiness to your Source of Happiness </p>
+      </div>
+   </header>
+
+
+   <h2>Contact</h2>
+   <form action="" class="contact-form">
+
+      <div class="form-main">
+         <div class="left-form">
+            <label class="contact-label" for="name">Name</label>
+            <input type="text" class="contact-input" id="name" placeholder="e.g: Tomas" name="name" required>
+
+            <label class="contact-label" for="mail">Mail</label>
+            <input type="email" class="contact-input" id="mail" placeholder="e.g: mail@gmail.com" name="mail">
+
+            <label class="contact-label" for="pet">Pet</label>
+            <input type="text" class="contact-input" id="pet" placeholder="Cat - Dog - etc.." name="kindOfPet">
+         </div>
+
+         <div class="right-form">
+            <label class="contact-label" for="lastName">Last Name</label>
+            <input type="text" class="contact-input" id="lastName" placeholder="e.g: Edison" name="lastName">
+
+
+            <label class="contact-label" for="location">Phone</label>
+            <input type="text" class="contact-input" id="location" placeholder="e.g: Georgia">
+
+
+            <label class="contact-label" for="petName">Pet Name</label>
+            <input type="text" class="contact-input" id="petName" placeholder="Pet Name" name="petName">
+         </div>
+
+      </div>
+
+      <div>
+         <div class="coments-container">
+            <label class=" " for="comments">Have any comments?</label>
+            <input type="text" class="coments-input" id="comments">
+         </div>
+      </div>
+
+      <div class="sendButton-container">
+         <input type="submit" class="send-button" value="Send">
+      </div>
    </form>
 
+
+
+   <footer class="footer">
+      <div class="footer-main">
+
+         <div class="flecha-icon-container">
+            <img src="./img/flecha-arriba.png" class="flecha-icon" alt="">
+         </div>
+
+         <div class="socialMedia-container">
+            <div>
+               <p class="socialMedia-tittle">You can find us in:</p>
+            </div>
+            <div>
+               <nav class="footer-nav">
+                  <a href="#">
+                     <img src="./img/instagram.png" alt="">
+                  </a> <a href="#">
+                     <img src="./img/instagram.png" alt="">
+                  </a> <a href="#">
+                     <img src="./img/instagram.png" alt="">
+                  </a> <a href="#">
+                     <img src="./img/instagram.png" alt="">
+                  </a> <a href="#">
+                     <img src="./img/instagram.png" alt="">
+                  </a>
+               </nav>
+            </div>
+         </div>
+
+         <div>
+            <p> © Designed and Developed by @_mateo.lorenzo_dev</p>
+         </div>
+
+      </div>
+   </footer>
    <script src="./scripts/main.js"></script>
 </body>
 

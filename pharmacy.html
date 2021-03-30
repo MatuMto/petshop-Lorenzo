@@ -1,15 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Pharmacy</title>
+   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body>
+<body id="pharmacy">
+   <header class="header">
+      <div class="sub-header">
+         <div class="nav-container">
+            <nav class="header-nav">
+               <a href="./home.html">Home</a>
+               <a href="./toyStore.html">Toy Store</a>
+               <a href="./pharmacy.html">Pharmacy</a>
+               <a href="./contact.html">Contact</a>
+            </nav>
+         </div>
+      </div>
 
+      <div class="header-tittle-container">
+         <p class="header-tittle">Franco's Petshop</p>
+         <!-- <p class="header-slogan">Your Pet, Our Passion </p> -->
+         <p class="header-slogan">Bringing Happiness to your Source of Happiness </p>
+      </div>
+   </header>
+
+   <div class="infoCards-section">
+      <div class="infoCards-container">
+         <div class="info-card">
+            <div class="img-card-container">
+               <img src="./img/cards 1.png" class="home-card-img" alt="">
+            </div>
+            <p class="infoCard-text1"><strong> Curbside Pickup</strong></p>
+            <p class="infoCard-text2"> Order online, drive up, check in & pick up</p>
+         </div>
+         <div class="info-card">
+            <div class="img-card-container">
+               <img src="./img/cards 2.png" class="home-card-img" alt="">
+            </div>
+            <p class="infoCard-text1"><strong> FREE Same-Day-Delivery </strong></p>
+            <p class="infoCard-text2">Find lots of products with free Deliver</p>
+         </div>
+         <div class="info-card">
+            <div class="img-card-container">
+               <img src="./img/cards 3.png" class="home-card-img" alt="">
+            </div>
+            <p class="infoCard-text1"><strong> Ship to Home</strong></p>
+            <p class="infoCard-text2">FREE shipping on orders over $49</p>
+         </div>
+         <div class="info-card">
+            <div class="img-card-container">
+               <img src="./img/cards 4.png" class="home-card-img" alt="">
+            </div>
+            <p class="infoCard-text1"><strong> We're Here for You</strong></p>
+            <p class="infoCard-text2">You & your pet's health are our priority</p>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="card-container">
+      <div class="card" id="card">
+         <!-- icons -->
+         <div class="info-icon-container">
+            <img src="./icons/info.png" class="info-icon" id="infoIcon" alt="">
+         </div>
+         <div class="carrito-icon-container" id="carritoIconContainer">
+            <img src="./icons/carrito.png" class="carrito-icon" id="carritoIcon" alt="">
+         </div>
+         <!-- img|texts|nrs -->
+         <div class="sub-card">
+            <img src="./img/product-image-1432090831_1024x1024.jpg" alt="" class="img">
+            <div class="text-container">
+               <p class="previous-price" id="previousPrice"><strong><del> $ 2.500</del></strong></p>
+               <div class="price-container" id="cardPriceContainer">
+                  <p class="price"><strong>$ 2.350</strong></p>
+                  <p class="discount"><strong> 13% OFF</strong></p>
+               </div>
+               <p class="last-units"><strong>Last Units!</strong></p>
+            </div>
+            <div class="product-name-container" id="productName">
+               <p class="product-name"><strong>Pelota interactiva de goma </strong></p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+
+
+   <footer class="footer">
+      <div class="footer-main">
+
+         <div class="flecha-icon-container">
+            <img src="./img/flecha-arriba.png" class="flecha-icon" alt="">
+         </div>
+
+         <div class="socialMedia-container">
+            <div>
+               <p class="socialMedia-tittle">You can find us in:</p>
+            </div>
+            <div>
+               <nav class="footer-nav">
+                  <a href="#">
+                     <img src="./img/instagram.png" alt="">
+                  </a> <a href="#">
+                     <img src="./img/instagram.png" alt="">
+                  </a> <a href="#">
+                     <img src="./img/instagram.png" alt="">
+                  </a> <a href="#">
+                     <img src="./img/instagram.png" alt="">
+                  </a> <a href="#">
+                     <img src="./img/instagram.png" alt="">
+                  </a>
+               </nav>
+            </div>
+         </div>
+
+         <div>
+            <p> © Designed and Developed by @_mateo.lorenzo_dev</p>
+         </div>
+
+      </div>
+   </footer>
+
+   <script src="scripts/main.js"></script>
 </body>
 
 </html>

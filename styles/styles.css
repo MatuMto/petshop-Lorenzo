@@ -3,7 +3,7 @@
    padding: 0;
 }
 body{
-   background: rgb(245,238,222);
+   /* background: rgb(245,238,222); */
 }
 
 @font-face {
@@ -16,6 +16,15 @@ body{
    src: url("../font/OpenSans-Regular.ttf");
  }
 
+ @font-face {
+   font-family: "Montserrat";
+   src: url("../font/Montserrat-Light.ttf");
+ }
+
+ @font-face {
+   font-family: "Montserrat-extraLight";
+   src: url("../font/Montserrat-ExtraLight.ttf");
+ }
 
 @font-face{
    font-family: "raleway";
@@ -26,27 +35,48 @@ body{
  @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@300&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap');
 
+.montserrat-light {
+   font-family: Montserrat;
+}
+
+.montserrat-extra-light {
+   font-family: "Montserrat-extraLight";
+
+}
 
 
  /* ========================================================================================= 
     ============================================= HOME ======================================
     ========================================================================================= */
  .header{
+   /* position: sticky; */
    width: 100%;
    height: 30vh;
+   top: 0px;
    background: rgb(64,161,179);
 }
 
+/* .sub-header {
+   position: sticky;
+   width: 100%;
+   height: 30vh;
+   top: 0px;
+   background: rgb(64,161,179);
+} */
+
 .nav-container {
-   /* background: yellow; */
+   background: yellow;
+   position: sticky;
+   top: 0px;
    height: 5vh;
    display: flex;
    justify-content: center;
+   z-index: 1;
 }
 
 .header-nav {
    /* background: green; */
-   width: 40vw;
+   width: 50vw;
    display: flex;
    justify-content: space-around;
    align-items: center;
@@ -57,11 +87,17 @@ body{
    text-decoration: none;
    font-size: 20px;
    font-family: 'Montserrat', sans-serif;
+   /* background: red; */
+   /* width: 120px; */
+   border-radius: 5px;
+   padding: 10px;
+   text-align: center;
 }
 
 .header-nav a:hover {
-   background: green;
-   padding: 5px 10px;
+   background: rgb(131, 206, 131);
+   
+   /* padding: 5px 10px; */
 }
 
 .header-tittle-container {
@@ -98,7 +134,7 @@ body{
 .infoCards-section {
    width: 100%;
    height: 30vh;
-   background: rgb(224, 222, 183);
+   /* background: rgb(224, 222, 183); */
    display: flex;
    justify-content: center;
    align-items: center;
@@ -179,7 +215,8 @@ body{
    height: 20vh;
    background: rgb(230,187,213);
    position: absolute;
-   right: 0;
+   right: 0px;
+   top: -60px;
    /* margin-top: 0px; */
 }
 
@@ -188,32 +225,134 @@ body{
 }
 
 .sub-presentation-container {
-   /* border: 1px solid black; */
+   /* background: green; */
    display: flex;
    justify-content: space-around;
-   /* align-items: center; */
+   align-items: center;
 }
 
 .presentation-image{
-   margin-top: 8vh;
-   z-index: 1;
+   width: 50%;
 }
 
 .presentation-text-container {
-   /* background: green; */
-   font-family:  "Calibri" ;
+   /* font-family:  "Calibri" ; */
    display: flex;
-   font-size: 35px;
-   /* justify-content: center; */
-   align-items: center;
-   /* margin-top: 200px; */
-   width: 20vw;
+   flex-direction: column;
+   justify-content: space-between;
+   /* align-items: center; */
+   align-self: flex-end;
+   font-size: 27px;
+   width: 100%;
+   height: 60vh;
+   /* background: orange; */
+}
 
+.aclaration-xd {
+   font-size: 12px;
 }
 
 
 
-/* HOME FOOTER */
+ /* ========================================================================================= 
+    ============================================= LOCATION ==================================
+    ========================================================================================= */
+
+
+.location-section{
+   width: 70vw;
+   height: 70vh;
+   /* border: 1px solid black; */
+   margin: 10px auto;
+   position: relative;
+}
+
+
+.location-tittle-container {
+   width:50vw;
+   margin: 0 auto;
+}
+
+.location-tittle {
+   font-size: 50px;
+}
+
+.location-bottomSection {
+   /* background: red; */
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   width:55vw;
+   margin: 0 auto;
+}
+
+.location-left {
+   font-size: 30px;
+   /* background: pink; */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.located-container {
+   background: rgb(255,213,0);
+   padding: 20px;
+   /* font-family: "Montserrat-extraLight"; */
+
+}
+
+.location-schedule{
+   /* background: orchid; */
+   height: 40%;
+   /* font-family: "Montserrat-extraLight"; */
+}
+
+.sundays-holidays {
+   margin-top: 40px;
+}
+
+.yellow-bar {
+   background: rgb(234,67,53);
+   width: 100%;
+   height: 10px;
+}
+
+.location-right {
+   background: orange;
+}
+
+.map {
+}
+
+.yellow-border {
+   width: 500px;
+   height: 400px;
+   background: yellow;
+   position: absolute;
+   bottom: 13vh;
+   right: 6vw;
+   /* bottom: 10px; */
+   /* right: 170px; */
+   z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* ========================================================================================= 
+    ============================================= HOME FOOTER ===============================
+    ========================================================================================= */
 
 .footer{
    width: 100%;
@@ -269,19 +408,29 @@ body{
 .card-container {
    display: flex;
    flex-wrap: wrap;
+   justify-content: space-around;
+   width: 50vw;
+   margin: 0 auto;
+   /* background: blue; */
+}
+
+.card-border {
+   width: 224;
+   height: 380px;
+   /* background: red; */
 }
 
 .card {
    width: 224px;
    height: 320px;
-   border-bottom: 1px solid rgb(187, 186, 186);
+   border: 1px solid rgb(214, 214, 214);
+   border-bottom: 1px solid rgb(211, 205, 205);
    display: flex;
    flex-direction: column;
    margin: 10px;
    transition: all .2s ease;
    position: relative;
    border-radius: 5px;
-   /* background: rgb(199, 199, 199); */
 }
 
 .card:hover {
@@ -435,14 +584,80 @@ body{
     ============================================= CONTACT ===================================
     ========================================================================================= */
 
-.hola {
-   width: 20px;
-   height: 20px;
-   background: green;
+.contact-form {
+   background: rgb(44,205,197);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 80vh;
+   /* height: 40vh; */
+   /* display: flex; */
 }
 
+.form-main {
+   display: flex;
+   justify-content: space-between;
+   /* margin: 0 auto; */
+   width: 33vw;
+   height: 33vh;
+   /* border: 2px solid; */
+}
 
+.left-form {
+   /* background: yellow; */
+   display: flex;
+   flex-direction: column;
+}
 
+.right-form {
+   /* background: pink; */
+   display: flex;
+   flex-direction: column;
+}
+
+.contact-label {
+   font-size: 23px;
+}
+
+.contact-input {
+   border: none;
+   outline: none;
+   border-radius: 7px;
+   width: 15vw;
+   height: 5vh;
+   margin-bottom: 4vh;
+}
+
+.coments-container {
+   width: 33vw;
+   /* background: green; */
+   display: flex;
+   flex-direction: column;
+}
+
+.coments-input {
+   width: 100%;
+   height: 10vh;
+   border: none;
+   outline: none;
+   border-radius: 7px;
+}
+
+.sendButton-container {
+   /* background: lightblue; */
+   width: 35vw;
+   display: flex;
+   justify-content:flex-end;
+}
+
+.send-button {
+   width: 37%;
+   height: 3vh;
+}
+
+.send-button {
+   cursor: pointer;
+}
 
 
 

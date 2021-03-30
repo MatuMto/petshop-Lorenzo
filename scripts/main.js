@@ -12,22 +12,44 @@ const card = document.querySelectorAll('.card')
 fetch('https://apipetshop.herokuapp.com/api/articulos')
 .then(data=>data.json())
 .then(dataLista => {
-   crearCard(dataLista.response)
+   // crearCard(dataLista.response)
+   // dataLista.response.forEach((element)=>{
+   //    if (element.tipo === "Juguete"){
+   //       console.log('Soy Un juguete xD')
+   //    } else {
+   //       console.log('Soy un remedio :v')
+   //    }
+   // })
+
+   if(document.getElementById('toyStore')){
+      dataLista.response.forEach((element)=>{
+         if(element.tipo === "Juguete"){
+            crearCard(element)
+         }
+      })
+   } else if (document.getElementById('pharmacy')){
+      dataLista.response.forEach((element)=>{
+         if(element.tipo === "Medicamento"){
+            crearCard(element)
+         }
+      })
+   }
+
+      
    console.log(dataLista.response[0])
 })   
 .catch((error) => {console.log(error)})
 
 let nuevoCard = ''
-function crearCard (array){
-   array.forEach(function(element){
-      // let lastsUnitsClass = 'last-units'
-      // if(element.stock > 4){
-      //    lastsUnitsClass = 'display-none'
-      // }
-      
+function crearCard (element){      
+      let cardBorder = document.createElement('div')
+      cardBorder.setAttribute('class', 'card-border')
+      cardContainer.appendChild(cardBorder)
+
+
       nuevoCard = document.createElement('div')
       nuevoCard.setAttribute('class', 'card')
-      cardContainer.appendChild(nuevoCard)
+      cardBorder.appendChild(nuevoCard)
 
       // info icon container
       let infoIconContainer = document.createElement('div')
@@ -39,12 +61,6 @@ function crearCard (array){
       infoIcon.setAttribute('class', 'info-icon')
       infoIcon.textContent = 'i'
       infoIconContainer.appendChild(infoIcon)
-      
-      // info icon 
-      // let infoIcon = document.createElement('img')
-      // infoIcon.setAttribute('src', './icons/i de info.png')
-      // infoIcon.setAttribute('class', 'info-icon')
-      // infoIconContainer.appendChild(infoIcon)
 
       // carrito icon
       let carritoIconContainer = document.createElement('div')
@@ -114,39 +130,12 @@ function crearCard (array){
       productName.setAttribute('class', 'product-name')
       productNameContainer.appendChild(productName)
 
-
-      console.log(nuevoCard)
-      // nuevoCard.innerHTML = 
-      // `  <div class="info-icon-container">
-      //       <img src="./icons/info.png" class="info-icon" id="infoIcon" alt="">
-      //    </div>
-      //    <div class="carrito-icon-container" id="carritoIconContainer">
-      //       <img src="./icons/carrito.png" class="carrito-icon" id="carritoIcon" alt="">
-      //    </div>
-
-      //    <div class="sub-card">
-      //       <img src="${element.imagen}" alt="">
-      //       <div class="text-container">
-      //          <p class="previous-price" id="previousPrice"><strong><del> $ 2.500</del></strong></p>
-      //          <div class="card-price-container" id="cardPriceContainer">
-      //             <p class="card-price"><strong>$ ${element.precio}</strong></p>
-      //             <p class="discount"><strong> 13% OFF</strong></p>
-      //          </div>
-      //          <p class"ninguna"><strong>Last Units!</strong></p>
-      //       </div>
-      //       <div class="product-name" id="productName">
-      //          <p><strong>Pelota interactiva de goma </strong></p>
-      //       </div>
-      //    </div>`
-
       
       
 
-      // Para laburar con esto cambiar los ids por clases!
       nuevoCard.addEventListener('mouseover', function(){
          carritoIconContainer.style.display = 'flex'
          infoIconContainer.style.display = 'block'
-         // infoIcon.style.display = 'block'
          previousPrice.style.display ='block'
          priceContainer.style.marginTop = '20px'
          productNameContainer.style.display = 'block' 
@@ -155,12 +144,11 @@ function crearCard (array){
       nuevoCard.addEventListener('mouseout', function(){
          carritoIconContainer.style.display = 'none'
          infoIconContainer.style.display = 'none'
-         // infoIcon.style.display = 'none'
          previousPrice.style.display ='none'
          priceContainer.style.marginTop = '15px'
          productNameContainer.style.display = 'none' 
       })
-   })   
+
 }
 
 
