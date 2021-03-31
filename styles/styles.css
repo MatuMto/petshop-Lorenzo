@@ -128,17 +128,14 @@ body{
 .infoCards-section {
    width: 100%;
    height: 30vh;
-   /* background: rgb(224, 222, 183); */
    display: flex;
    justify-content: center;
    align-items: center;
 }
 
 .infoCards-container {
-   /* background: yellow; */
    width: 65vw;
    height: 20vh;
-   /* margin: auto auto; */
    align-items: center;
    display: flex;
    justify-content: space-between;
@@ -155,7 +152,6 @@ body{
 }
 
 .img-card-container{
-   /* background: green; */
    height: 37% ;
 }
 
@@ -184,23 +180,12 @@ body{
 
 
 /* MAIN SECTION */
-/* 
-.para-hacer-espacio{
-   width: 100%;
-   height: 150vh;
-   background:rgb(245,238,222);
-} */
 
 .presentation-container {
    width: 55vw;
    height: 80vh;
    margin: 10vh 0px 20vh 10vw;
-   /* margin-top: 20vh; */
-   /* margin-left: 10vw; */
-   /* margin: 0 auto; */
    position: relative;
-   /* border: 1px solid black; */
-   /* background: rgb(61, 50, 58); */
 }
 
 .whoWeAre-block{
@@ -213,7 +198,6 @@ body{
    position: absolute;
    right: 0px;
    top: -60px;
-   /* margin-top: 0px; */
 }
 
 .who-we-are {
@@ -221,7 +205,6 @@ body{
 }
 
 .sub-presentation-container {
-   /* background: green; */
    display: flex;
    justify-content: space-around;
    align-items: center;
@@ -230,22 +213,16 @@ body{
 
 .presentation-image{
    width: 50%;
-   /* display: flex; */
-   /* align-self: ; */
 }
 
 .presentation-text-container {
-   /* font-family:  "Calibri" ; */
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   /* align-items: center; */
    align-self: flex-end;
    font-size: 27px;
    width: 100%;
    height: 60vh;
-   /* text-align: justify; */
-   /* background: orange; */
 }
 
 .aclaration-xd {
@@ -261,12 +238,10 @@ body{
 
 
 .location-section{
-   /* margin-top: 10vh; */
    width: 70vw;
    height: 70vh;
    margin: 10px auto;
    position: relative;
-   /* border: 1px solid black; */
 }
 
 
@@ -280,7 +255,6 @@ body{
 }
 
 .location-bottomSection {
-   /* background: red; */
    width:1000px;
    display: flex;
    justify-content: space-between;
@@ -290,7 +264,6 @@ body{
 
 .location-left {
    font-size: 30px;
-   /* background: pink; */
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
@@ -300,14 +273,12 @@ body{
 .located-container {
    background: rgb(255,213,0);
    padding: 20px;
-   /* font-family: "Montserrat-extraLight"; */
 
 }
 
 .location-schedule{
    /* background: orchid; */
    height: 40%;
-   /* font-family: "Montserrat-extraLight"; */
 }
 
 .sundays-holidays {
@@ -334,21 +305,8 @@ body{
    position: absolute;
    bottom: 13vh;
    right: 6vw;
-   /* bottom: 10px; */
-   /* right: 170px; */
    z-index: -1;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -363,7 +321,6 @@ body{
 }
 
 .footer-main {
-   /* background: red; */
    width: 40vw;
    height: 100%;
    display: flex;
@@ -385,7 +342,6 @@ body{
    text-align: center;
    width: 700px;
    height: 13vh;
-   /* background: red; */
 }
 
 .socialMedia-tittle {
@@ -395,7 +351,6 @@ body{
 }
 
 .footer-nav {
-   /* background: green; */
    display: flex;
    justify-content: space-around;
    width: 350px;
@@ -403,9 +358,6 @@ body{
 
 .footer-nav a{
    text-decoration: none;   
-   /* background: yellow; */
-   /* display: inline-block; */
-   /* height: 50px; */
 }
 
 .footer-nav a img{
@@ -413,9 +365,6 @@ body{
 }
 
 .footer-text {
-   /* font-size: 410px; */
-   /* color: rgb(105, 71, 157); */
-   /* color: white; */
    color: rgb(204,204,204);
 }
 
@@ -446,27 +395,20 @@ body{
    background-position: center;
 }
 
-/* .toyStore-img { */
-   /* width: 100%; */
-/* } */
-
 .card-container {
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
    width: 50vw;
    margin: 0 auto;
-   /* background: blue; */
 }
 
 .card-border {
    width: 224;
    height: 380px;
-   /* background: red; */
 }
 
 .card {
-   /* background: green; */
    width: 224px;
    height: 320px;
    border: 1px solid rgb(214, 214, 214);
@@ -485,10 +427,6 @@ body{
    box-shadow: 0px 10px 20px rgb(126, 126, 126);
 }
 
-/* .nuevaClassName {
-   background: ;
-} */
-
 .carrito-icon-container {
    display: none;
    width: 35px;
@@ -496,7 +434,6 @@ body{
    position: absolute;
    top: 10px;
    right: 4px;
-   /* display: flex; */
    justify-content: center;
    align-items: center;
    border-radius: 100%;
@@ -510,7 +447,6 @@ body{
 
 .carrito-icon {
    width: 24px;
-   /* display: none; */
 }
 
 .info-icon-container {
@@ -539,7 +475,6 @@ body{
 
 
 .sub-card {
-   /* background: red; */
    margin-top: 5%;
    display: flex;
    flex-direction: column;
@@ -555,7 +490,6 @@ body{
    flex-direction: column;
    width: 80%;
    margin: 0 10%;
-   /* background: green; */
    position: relative;
 }
 
@@ -593,7 +527,6 @@ body{
 }
 
 .purchase-button-container{
-   /* background: green; */
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -624,8 +557,6 @@ body{
    width: 48%;
    font-weight: bold;
    text-align: center;
-   /* display: block; */
-   /* text-align: center; */
 }
 
 .product-name-container {
@@ -668,9 +599,6 @@ body{
 }
 
 
-
-
-
  /* ========================================================================================= 
     ============================================= CONTACT ===================================
     ========================================================================================= */
@@ -678,24 +606,19 @@ body{
 .form-section{
    width: 100%;
    background: rgb(44,205,197);
-   /* margin-top: 20vh 0; */
 }
 
 .contact-form {
    padding-top: 10vh ;
    margin: 0 auto;
-   /* background: pink; */
    display: flex;
    flex-direction: column;
    align-items: center;
    width: 600px;
    height: 60vh;
-   /* height: 40vh; */
-   /* display: flex; */
 }
 
 .contact-tittle-container {
-   /* background: green; */
    color: white;
    width: 33vw;
    margin: 0 auto;
@@ -708,24 +631,19 @@ body{
 .form-main {
    display: flex;
    justify-content: space-between;
-   /* background: red; */
-   /* margin: 0 auto; */
    width: 100%;
    height: 30vh;
-   /* border: 2px solid; */
 }
 
 .left-form {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   /* background: yellow; */
    width: 46%;
 }
 
 .right-form {
    width: 46%;
-   /* background: pink; */
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -735,9 +653,7 @@ body{
 .input-container {
    display: flex;
    flex-direction: column;
-   /* background: green; */
    height: 80px;
-   /* margin: 2px; */
 }
 
 .contact-label {
@@ -750,7 +666,6 @@ body{
    border-radius: 7px;
    width: 100%;
    height: 4vh;
-   /* margin-bottom: 4vh; */
 }
 
 
@@ -763,7 +678,6 @@ body{
 
 .coments-container {
    width: 100%;
-   /* background: green; */
    display: flex;
    flex-direction: column;
 }
@@ -783,7 +697,6 @@ body{
 }
 
 .sendButton-container {
-   /* background: lightblue; */
    width: 100%;
    display: flex;
    justify-content:flex-end;
