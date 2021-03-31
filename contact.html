@@ -7,69 +7,88 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Contact</title>
    <link rel="stylesheet" href="styles/styles.css">
+   <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 
-<body>
+<body id="contact">
+
+   <div class="nav-container">
+      <nav class="header-nav">
+         <a href="./index.html">Home</a>
+         <a href="./toyStore.html">Toy Store</a>
+         <a href="./pharmacy.html">Pharmacy</a>
+         <a href="./contact.html">Contact</a>
+      </nav>
+   </div>
 
    <header class="header">
-      <div class="nav-container">
-         <nav class="header-nav">
-            <a href="./index.html">Home</a>
-            <a href="./toyStore.html">Toy Store</a>
-            <a href="./pharmacy.html">Pharmacy</a>
-            <a href="./contact.html">Contact</a>
-         </nav>
-      </div>
-
       <div class="header-tittle-container">
-         <p class="header-tittle">Franco's Petshop</p>
-         <!-- <p class="header-slogan">Your Pet, Our Passion </p> -->
-         <p class="header-slogan">Bringing Happiness to your Source of Happiness </p>
+         <img class="logo" src="./img/cropped-logo-champy-logo-a-1.png" alt="">
+         <div>
+            <p class="header-tittle">Franco's Petshop</p>
+            <p class="header-slogan">Bringing Happiness to your Source of Happiness </p>
+         </div>
       </div>
    </header>
 
-
-   <h2>Contact</h2>
-   <form action="" class="contact-form">
-
-      <div class="form-main">
-         <div class="left-form">
-            <label class="contact-label" for="name">Name</label>
-            <input type="text" class="contact-input" id="name" placeholder="e.g: Tomas" name="name" required>
-
-            <label class="contact-label" for="mail">Mail</label>
-            <input type="email" class="contact-input" id="mail" placeholder="e.g: mail@gmail.com" name="mail">
-
-            <label class="contact-label" for="pet">Pet</label>
-            <input type="text" class="contact-input" id="pet" placeholder="Cat - Dog - etc.." name="kindOfPet">
+   <section class="form-section">
+      <form action="" class="contact-form">
+         <div class="contact-tittle-container">
+            <h2 class="montserrat-light contact-tittle">Send us some love! </h2>
          </div>
 
-         <div class="right-form">
-            <label class="contact-label" for="lastName">Last Name</label>
-            <input type="text" class="contact-input" id="lastName" placeholder="e.g: Edison" name="lastName">
+         <div class="form-main">
+            <div class="left-form">
+               <div class="input-container">
+                  <label class="contact-label montserrat-extra-light" for="nameInput">*Name</label>
+                  <input type="text" class="contact-input" id="nameInput" placeholder="e.g: Tomas" name="name">
+                  <p class="error-message" id="incompleteName">*Please complete this field</p>
+               </div>
 
+               <div class="input-container">
+                  <label class="contact-label montserrat-extra-light" for="mailInput">*Mail</label>
+                  <input type="email" class="contact-input" id="mailInput" placeholder="e.g: mail@gmail.com"
+                     name="mail">
+                  <p class="error-message" id="incompleteMail">*Please complete this field</p>
+               </div>
 
-            <label class="contact-label" for="location">Phone</label>
-            <input type="text" class="contact-input" id="location" placeholder="e.g: Georgia">
+               <div class="input-container">
+                  <label class="contact-label montserrat-extra-light" for="petInput">Pet</label>
+                  <input type="text" class="contact-input" id="petInput" placeholder="Cat - Dog - etc.."
+                     name="kindOfPet">
+               </div>
+            </div>
 
+            <div class="right-form">
+               <div class="input-container">
+                  <label class="contact-label montserrat-extra-light" for="lastNameInput">*Last Name</label>
+                  <input type="text" class="contact-input" id="lastNameInput" placeholder="e.g: Edison" name="lastName">
+                  <p class="error-message" id="incompleteLastName">*Please complete this field</p>
+               </div>
 
-            <label class="contact-label" for="petName">Pet Name</label>
-            <input type="text" class="contact-input" id="petName" placeholder="Pet Name" name="petName">
+               <div class="input-container">
+                  <label class="contact-label montserrat-extra-light" for="locationInput">Phone</label>
+                  <input type="text" class="contact-input" id="locationInput" placeholder="">
+               </div>
+
+               <div class="input-container">
+                  <label class="contact-label montserrat-extra-light" for="petNameInput">Pet Name</label>
+                  <input type="text" class="contact-input" id="petNameInput" placeholder="Tom" name="petName">
+               </div>
+            </div>
+
          </div>
 
-      </div>
-
-      <div>
          <div class="coments-container">
-            <label class=" " for="comments">Have any comments?</label>
+            <label class="comments-label montserrat-light" for="comments">Have any comments?</label>
             <input type="text" class="coments-input" id="comments">
          </div>
-      </div>
 
-      <div class="sendButton-container">
-         <input type="submit" class="send-button" value="Send">
-      </div>
-   </form>
+         <div class="sendButton-container">
+            <input type="submit" class="send-button" id="sendButton" value="Send">
+         </div>
+      </form>
+   </section>
 
 
 
@@ -102,11 +121,12 @@
          </div>
 
          <div>
-            <p> © Designed and Developed by @_mateo.lorenzo_dev</p>
+            <p class="footer-text"> © Designed and Developed by @_mateo.lorenzo_dev</p>
          </div>
 
       </div>
    </footer>
+   <script src="sweetalert2.all.min.js"></script>
    <script src="./scripts/main.js"></script>
 </body>
 

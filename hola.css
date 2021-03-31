@@ -1,0 +1,33 @@
+html, body {
+   width: 100%;
+   height: 100%;
+   padding: 0;
+   margin: 0;
+}
+
+
+section {
+   width: 100%;
+   height: 50%;
+   padding: 0;
+   margin: 0;
+}
+
+.parallax {
+   background: #fff fixed no-repeat 50% 50%;
+   background-size: cover;
+}
+
+#seccion1 {
+   background-image: url('./img/5e3de0a9bf73c.jpeg');
+}
+
+#seccion2 {
+   background-image: url('./img/64504101-cogida-del-perro-volador-en-salto-animal-doméstico-juega-al-aire-libre-en-un-parque-disco-del-vuelo.jpg');
+}
+
+#seccion3 {
+   background-image: url('./img/30ed8e42bd798850f52eada04cbc960d.jpg');
+}
+
+

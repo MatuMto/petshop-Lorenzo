@@ -19,4 +19,4 @@
       #        <div class="product-name" id="productName">
       #          <p><strong>Pelota interactiva de goma </strong></p>
       #        </div>
-      #     </div>`
+      #     </div >`

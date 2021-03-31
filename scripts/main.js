@@ -12,15 +12,6 @@ const card = document.querySelectorAll('.card')
 fetch('https://apipetshop.herokuapp.com/api/articulos')
 .then(data=>data.json())
 .then(dataLista => {
-   // crearCard(dataLista.response)
-   // dataLista.response.forEach((element)=>{
-   //    if (element.tipo === "Juguete"){
-   //       console.log('Soy Un juguete xD')
-   //    } else {
-   //       console.log('Soy un remedio :v')
-   //    }
-   // })
-
    if(document.getElementById('toyStore')){
       dataLista.response.forEach((element)=>{
          if(element.tipo === "Juguete"){
@@ -33,6 +24,8 @@ fetch('https://apipetshop.herokuapp.com/api/articulos')
             crearCard(element)
          }
       })
+   } else if (document.getElementById('contact')){
+      contactFunction()
    }
 
       
@@ -149,7 +142,53 @@ function crearCard (element){
          priceContainer.style.marginTop = '15px'
          productNameContainer.style.display = 'none' 
       })
+}
 
+function contactFunction(){
+   let sendButton = document.getElementById('sendButton')
+   sendButton.addEventListener('click', function(e){
+      e.preventDefault()
+      let nameInputCompleted = true
+      if (document.getElementById('nameInput').value === ''){
+         document.getElementById('incompleteName').style.display = 'block'
+         nameInputCompleted = false
+      } else {
+         document.getElementById('incompleteName').style.display = 'none'
+         nameInputCompleted = true         
+      }
+      
+      let lastNameInputCompleted = true
+      if (document.getElementById('lastNameInput').value === ''){
+         document.getElementById('incompleteLastName').style.display = 'block'
+         lastNameInputCompleted = false
+      } else {
+         document.getElementById('incompleteLastName').style.display = 'none'
+         lastNameInputCompleted = true
+      }
+
+      let mailInputCompleted = false
+      if (document.getElementById('mailInput').value === ''){
+         document.getElementById('incompleteMail').style.display = 'block'
+         mailInputCompleted = false
+      } else {
+         document.getElementById('incompleteMail').style.display = 'none'
+         mailInputCompleted = true
+      }
+
+      if (nameInputCompleted && lastNameInputCompleted && mailInputCompleted ){
+         console.log('todo está completado sr.')
+
+         Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your work has been saved',
+            showConfirmButton: false,
+            timer: 1500
+          })
+      } else {
+         console.log('faltan completar campos')
+      }
+   })
 }
 
 
