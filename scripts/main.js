@@ -83,12 +83,6 @@ function crearCard (element){
       textContainer.setAttribute('class', 'text-container')
       subCard.appendChild(textContainer)
 
-      // previous price
-      let previousPrice = document.createElement('p')
-      previousPrice.textContent = '$ 2.500'
-      previousPrice.setAttribute('class', 'previous-price')
-      textContainer.appendChild(previousPrice)
-
       // price container
       let priceContainer = document.createElement('div')
       priceContainer.setAttribute('class', 'price-container')
@@ -96,16 +90,25 @@ function crearCard (element){
 
       // price 
       let price = document.createElement('p')
-      price.textContent = `$ ${element.precio}`
+      price.textContent = `$ ${Math.floor(element.precio - ((element.precio * 15) / 100))}`
       price.setAttribute('class', 'price')
       priceContainer.appendChild(price)
 
-      // discount
-      let discount = document.createElement('p')
-      discount.setAttribute('class', 'discount')
-      discount.textContent = '13% OFF'
-      priceContainer.appendChild(discount)
-      
+      var previousPrice = document.createElement('p')
+      if (element.stock > 8){
+         // previous price
+         
+         // discount
+         let discount = document.createElement('p')
+         discount.setAttribute('class', 'discount')
+         discount.textContent = '15% OFF'
+         priceContainer.appendChild(discount)
+
+         previousPrice.textContent = `$ ${element.precio}`
+         previousPrice.setAttribute('class', 'previous-price')
+         textContainer.appendChild(previousPrice)
+      }
+   
       // purchaseButton container
       let purchaseButtonContainer = document.createElement('div')
       purchaseButtonContainer.setAttribute('class', 'purchase-button-container')
@@ -184,7 +187,8 @@ function crearCard (element){
          priceContainer.style.marginTop = '15px'
          productNameContainer.style.display = 'none' 
       })
-}
+      
+   }
 
 function contactFunction(){
    let sendButton = document.getElementById('sendButton')
@@ -223,10 +227,14 @@ function contactFunction(){
          Swal.fire({
             position: 'top-end',
             icon: 'success',
-            title: 'Your work has been saved',
-            showConfirmButton: false,
-            timer: 1500
+            title: `Thanks for your comments! We'll answer you soon :D`,
+            showConfirmButton: true,
+            timer: 1700
           })
+         for (let i = 0; i < document.querySelectorAll('.contact-input').length; i++) {
+            document.querySelectorAll('.contact-input')[i].value = ''   
+            document.getElementById('comments').value = ''         
+         }
       } else {
          console.log('faltan completar campos')
       }

@@ -7,7 +7,6 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Contact</title>
    <link rel="stylesheet" href="styles/styles.css">
-   <link rel="stylesheet" href="sweetalert2.min.css">
    <link rel="shortcut icon" type="image/jpg" href="./img/cropped-logo-champy-logo-a-1.png" />
 </head>
 
@@ -42,14 +41,13 @@
             <div class="left-form">
                <div class="input-container">
                   <label class="contact-label montserrat-extra-light" for="nameInput">*Name</label>
-                  <input type="text" class="contact-input" id="nameInput" placeholder="e.g: Tomas" name="name">
+                  <input type="text" class="contact-input" id="nameInput" placeholder="Teresa" name="name">
                   <p class="error-message" id="incompleteName">*Please complete this field</p>
                </div>
 
                <div class="input-container">
                   <label class="contact-label montserrat-extra-light" for="mailInput">*Mail</label>
-                  <input type="email" class="contact-input" id="mailInput" placeholder="e.g: mail@gmail.com"
-                     name="mail">
+                  <input type="email" class="contact-input" id="mailInput" placeholder="mail@gmail.com" name="mail">
                   <p class="error-message" id="incompleteMail">*Please complete this field</p>
                </div>
 
@@ -63,13 +61,13 @@
             <div class="right-form">
                <div class="input-container">
                   <label class="contact-label montserrat-extra-light" for="lastNameInput">*Last Name</label>
-                  <input type="text" class="contact-input" id="lastNameInput" placeholder="e.g: Edison" name="lastName">
+                  <input type="text" class="contact-input" id="lastNameInput" placeholder="Calcuta" name="lastName">
                   <p class="error-message" id="incompleteLastName">*Please complete this field</p>
                </div>
 
                <div class="input-container">
                   <label class="contact-label montserrat-extra-light" for="locationInput">Phone</label>
-                  <input type="text" class="contact-input" id="locationInput" placeholder="">
+                  <input type="text" class="contact-input" id="locationInput" placeholder="xx x xxxx xxxx">
                </div>
 
                <div class="input-container">
@@ -81,12 +79,12 @@
          </div>
 
          <div class="coments-container">
-            <label class="comments-label montserrat-light" for="comments">Have any comments?</label>
-            <input type="text" class="coments-input" id="comments">
+            <label class="comments-label montserrat-light" for="comments">Text us something!</label>
+            <textarea name="" class="coments-input" id="comments" cols="30" rows="10">            </textarea>
          </div>
 
          <div class="sendButton-container">
-            <input type="submit" class="send-button" id="sendButton" value="Send">
+            <input type="submit" class="send-button montserrat-light" id="sendButton" value="Send">
          </div>
       </form>
    </section>
