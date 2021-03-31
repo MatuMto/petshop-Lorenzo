@@ -96,14 +96,14 @@ function crearCard (element){
 
       var previousPrice = document.createElement('p')
       if (element.stock > 8){
-         // previous price
          
          // discount
          let discount = document.createElement('p')
          discount.setAttribute('class', 'discount')
          discount.textContent = '15% OFF'
          priceContainer.appendChild(discount)
-
+         
+         // previous price
          previousPrice.textContent = `$ ${element.precio}`
          previousPrice.setAttribute('class', 'previous-price')
          textContainer.appendChild(previousPrice)
