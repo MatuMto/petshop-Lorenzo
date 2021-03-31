@@ -12,6 +12,7 @@ const card = document.querySelectorAll('.card')
 fetch('https://apipetshop.herokuapp.com/api/articulos')
 .then(data=>data.json())
 .then(dataLista => {
+   console.log(dataLista.response)
    if(document.getElementById('toyStore')){
       dataLista.response.forEach((element)=>{
          if(element.tipo === "Juguete"){
@@ -57,14 +58,14 @@ function crearCard (element){
       infoIconContainer.appendChild(infoIcon)
 
       // carrito icon
-      let carritoIconContainer = document.createElement('div')
-      carritoIconContainer.setAttribute('class', 'carrito-icon-container')
-      nuevoCard.appendChild(carritoIconContainer)
+      // let carritoIconContainer = document.createElement('div')
+      // carritoIconContainer.setAttribute('class', 'carrito-icon-container')
+      // nuevoCard.appendChild(carritoIconContainer)
       
-      let carritoIcon = document.createElement('img')
-      carritoIcon.setAttribute('src', './icons/carrito.png')
-      carritoIcon.setAttribute('class', 'carrito-icon')
-      carritoIconContainer.appendChild(carritoIcon)
+      // let carritoIcon = document.createElement('img')
+      // carritoIcon.setAttribute('src', './icons/carrito.png')
+      // carritoIcon.setAttribute('class', 'carrito-icon')
+      // carritoIconContainer.appendChild(carritoIcon)
 
       // subcard
       let subCard = document.createElement('div')
@@ -105,12 +106,23 @@ function crearCard (element){
       discount.textContent = '13% OFF'
       priceContainer.appendChild(discount)
       
+      // purchaseButton container
+      let purchaseButtonContainer = document.createElement('div')
+      purchaseButtonContainer.setAttribute('class', 'purchase-button-container')
+      textContainer.appendChild(purchaseButtonContainer)
+
+      // purchase button
+      let purchaseButton = document.createElement('p')
+      purchaseButton.innerText = 'Purchase'
+      purchaseButton.setAttribute('class', 'purchase-button')
+      purchaseButtonContainer.appendChild(purchaseButton)
+
       // lasts units
       if(element.stock < 5){
          let lastsUnits = document.createElement('p')
          lastsUnits.textContent = 'Lasts Units!'
          lastsUnits.setAttribute('class', 'last-units')
-         textContainer.appendChild(lastsUnits)
+         purchaseButtonContainer.appendChild(lastsUnits)
       }   
 
       // product name container
@@ -124,11 +136,41 @@ function crearCard (element){
       productName.setAttribute('class', 'product-name')
       productNameContainer.appendChild(productName)
 
-      
-      
+      // description tittle
+      let descriptionTittle = document.createElement('h5')
+      descriptionTittle.setAttribute('class', 'description-tittle')
+      descriptionTittle.innerText = 'Description:'
+
+      // description text
+      let description = document.createElement('p')
+      description.setAttribute('class', 'product-description')
+      description.innerText = element.descripcion
+
+      let activador = true
+
+      infoIconContainer.addEventListener('click', function(){
+         if(activador){
+            subCard.removeChild(img) 
+            subCard.removeChild(textContainer) 
+            subCard.removeChild(productNameContainer) 
+            
+            subCard.appendChild(descriptionTittle)
+            subCard.appendChild(description)
+            activador = false
+         }else {
+            subCard.removeChild(descriptionTittle)
+            subCard.removeChild(description)
+
+            subCard.appendChild(img) 
+            subCard.appendChild(textContainer) 
+            subCard.appendChild(productNameContainer) 
+            activador = true
+         }
+
+      })
 
       nuevoCard.addEventListener('mouseover', function(){
-         carritoIconContainer.style.display = 'flex'
+         // carritoIconContainer.style.display = 'flex'
          infoIconContainer.style.display = 'block'
          previousPrice.style.display ='block'
          priceContainer.style.marginTop = '20px'
@@ -136,7 +178,7 @@ function crearCard (element){
       })
 
       nuevoCard.addEventListener('mouseout', function(){
-         carritoIconContainer.style.display = 'none'
+         // carritoIconContainer.style.display = 'none'
          infoIconContainer.style.display = 'none'
          previousPrice.style.display ='none'
          priceContainer.style.marginTop = '15px'

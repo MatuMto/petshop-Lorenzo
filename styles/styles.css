@@ -51,7 +51,7 @@ body{
  .header{
    /* position: sticky; */
    width: 100%;
-   height: 30vh;
+   height: 15vh;
    top: 0px;
    background: rgb(64,161,179);
 }
@@ -90,6 +90,10 @@ body{
    background: rgb(64,161,179);
    }
 
+.active {
+   background: red;
+}
+
 .logo {
    width: 5vw;
    margin-right: 2vw;
@@ -117,9 +121,9 @@ body{
 .img-container {
    width: 100%;
    background: url('../img/perros-jugando-juguetes.jpg') fixed ;
-   background-position: bottom center;
+   background-position: top top;
    background-size: cover;
-   height: 40vh;
+   height: 50vh;
 }
 
 
@@ -176,6 +180,7 @@ body{
    color: white;
    font-size: 13px;
    font-family: "Open-sans-ok";
+   text-align: center;
 }
 
 
@@ -183,18 +188,19 @@ body{
 
 
 /* MAIN SECTION */
-
+/* 
 .para-hacer-espacio{
    width: 100%;
    height: 150vh;
    background:rgb(245,238,222);
-}
+} */
 
 .presentation-container {
    width: 55vw;
-   height: 120vh;
-   margin-top: 20vh;
-   margin-left: 10vw;
+   height: 80vh;
+   margin: 10vh 0px 20vh 10vw;
+   /* margin-top: 20vh; */
+   /* margin-left: 10vw; */
    /* margin: 0 auto; */
    position: relative;
    /* border: 1px solid black; */
@@ -223,10 +229,13 @@ body{
    display: flex;
    justify-content: space-around;
    align-items: center;
+   height: 100%;
 }
 
 .presentation-image{
    width: 50%;
+   /* display: flex; */
+   /* align-self: ; */
 }
 
 .presentation-text-container {
@@ -239,11 +248,13 @@ body{
    font-size: 27px;
    width: 100%;
    height: 60vh;
+   /* text-align: justify; */
    /* background: orange; */
 }
 
 .aclaration-xd {
    font-size: 12px;
+   margin-bottom: 50px;
 }
 
 
@@ -254,11 +265,12 @@ body{
 
 
 .location-section{
+   /* margin-top: 10vh; */
    width: 70vw;
    height: 70vh;
-   /* border: 1px solid black; */
    margin: 10px auto;
    position: relative;
+   /* border: 1px solid black; */
 }
 
 
@@ -273,10 +285,10 @@ body{
 
 .location-bottomSection {
    /* background: red; */
+   width:1000px;
    display: flex;
    justify-content: space-between;
    align-items: flex-end;
-   width:55vw;
    margin: 0 auto;
 }
 
@@ -350,7 +362,7 @@ body{
 
 .footer{
    width: 100%;
-   height: 28vh;
+   height: 20vh;
    background: rgb(37,37,37);
 }
 
@@ -370,18 +382,34 @@ body{
 }
 
 .socialMedia-container{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
    text-align: center;
-   width: 30vw;
+   width: 700px;
+   height: 13vh;
+   /* background: red; */
 }
 
 .socialMedia-tittle {
    color: rgb(204,204,204);
    font-size: 50px ;
-   font-family: 'Raleway', sans-serif;
+   font-family: "Montserrat";
+}
+
+.footer-nav {
+   /* background: green; */
+   display: flex;
+   justify-content: space-around;
+   width: 350px;
 }
 
 .footer-nav a{
    text-decoration: none;   
+   /* background: yellow; */
+   /* display: inline-block; */
+   /* height: 50px; */
 }
 
 .footer-nav a img{
@@ -401,9 +429,30 @@ body{
 
 
  /* ========================================================================================= 
-    ============================================= FARMACIA | JUGUETERIA =====================
+    ============================================= PHARMACY | TOYSTORE =====================
     ========================================================================================= */
 
+.toyStore-img-container {
+   /* background: green; */
+   width: 100%;
+   height: 50vh;
+   background: url('../img/d324d95aa84072e834bfbce293d182f9.jpg') no-repeat ;
+   background-size: cover;
+   background-position: center ;
+}
+
+.pharmacy-img-container{
+   width: 100%;
+   height: 50vh;
+   background: url('../img/la-enfermedad-que-puede-matar-a-un-perro-en-menos-de-quince-minutos.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+/* .toyStore-img { */
+   /* width: 100%; */
+/* } */
 
 .card-container {
    display: flex;
@@ -421,6 +470,7 @@ body{
 }
 
 .card {
+   /* background: green; */
    width: 224px;
    height: 320px;
    border: 1px solid rgb(214, 214, 214);
@@ -435,8 +485,12 @@ body{
 
 .card:hover {
    cursor: pointer;
-   height: 350px;
+   height: 360px;
    box-shadow: 0px 10px 20px rgb(126, 126, 126);
+}
+
+.nuevaClassName {
+   background: ;
 }
 
 .carrito-icon-container {
@@ -489,6 +543,7 @@ body{
 
 
 .sub-card {
+   /* background: red; */
    margin-top: 5%;
    display: flex;
    flex-direction: column;
@@ -541,6 +596,27 @@ body{
    font-weight: bold;
 }
 
+.purchase-button-container{
+   /* background: green; */
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 5px;
+}
+
+.purchase-button {
+   background: #39b54a;
+   font-family: "Open-sans";
+   font-weight: bold;
+   border-radius: 4px;
+   padding: 5px 15px;
+   transition: all .2s ease ;
+}
+
+.purchase-button:hover{
+   box-shadow: 0px 0px 20px rgb(109, 109, 109);
+}
+
 .last-units {
    margin-top: 5px;
    font-size: 15px;
@@ -552,6 +628,7 @@ body{
    width: 48%;
    font-weight: bold;
    text-align: center;
+   /* display: block; */
    /* text-align: center; */
 }
 
@@ -570,6 +647,24 @@ body{
 
 .product-name {
    font-weight: bold;
+}
+
+.description-tittle {
+   font-size: 20px;
+   margin-top: 40px;
+   text-align: center;
+   font-family: "Open-sans";
+   font-weight: bold;
+   text-decoration: underline;
+}
+
+.product-description {
+   font-size: 14px;
+   margin: 20px 10px 0 10px;
+   text-align: center;
+   font-family: "Open-sans";
+   font-weight: bold;
+
 }
 
 .display-none {
