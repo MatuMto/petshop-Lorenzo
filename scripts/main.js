@@ -1,30 +1,26 @@
 const cardContainer = document.querySelector('.card-container')
 const card = document.querySelectorAll('.card')
-// const previousPrice = document.querySelector('#previousPrice')
-// const cardPriceContainer = document.querySelector('#cardPriceContainer')
-// const infoIcon = document.querySelector('#infoIcon')
-// const carritoIcon = document.querySelector('#carritoIcon')
-// const carritoIconContainer = document.querySelector('#carritoIconContainer')
-// const productName = document.querySelectorAll('.productName') 
-// const lastsUnits = document.querySelectorAll('.last-units')
 
 
 fetch('https://apipetshop.herokuapp.com/api/articulos')
 .then(data=>data.json())
 .then(dataLista => {
    console.log(dataLista.response)
+   
    if(document.getElementById('toyStore')){
       dataLista.response.forEach((element)=>{
          if(element.tipo === "Juguete"){
             crearCard(element)
          }
       })
+
    } else if (document.getElementById('pharmacy')){
       dataLista.response.forEach((element)=>{
          if(element.tipo === "Medicamento"){
             crearCard(element)
          }
       })
+      
    } else if (document.getElementById('contact')){
       contactFunction()
    }
@@ -40,7 +36,6 @@ function crearCard (element){
       let cardBorder = document.createElement('div')
       cardBorder.setAttribute('class', 'card-border')
       cardContainer.appendChild(cardBorder)
-
 
       nuevoCard = document.createElement('div')
       nuevoCard.setAttribute('class', 'card')
@@ -95,6 +90,7 @@ function crearCard (element){
       priceContainer.appendChild(price)
 
       var previousPrice = document.createElement('p')
+      
       if (element.stock > 8){
          
          // discount
@@ -194,6 +190,8 @@ function contactFunction(){
    let sendButton = document.getElementById('sendButton')
    sendButton.addEventListener('click', function(e){
       e.preventDefault()
+
+      // contact form
       let nameInputCompleted = true
       if (document.getElementById('nameInput').value === ''){
          document.getElementById('incompleteName').style.display = 'block'

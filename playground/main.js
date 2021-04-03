@@ -1,39 +1,24 @@
-const clickMe = document.querySelector('#clickMe')
-const score = document.querySelector('#score')
-const time = document.querySelector('#time')
-const playButton = document.querySelector('#playButton')
+const familiares = [
+   {nombre: 'Gordos Gordos', id:1},
+   {nombre: 'MatuMoto', id:2},
+   {nombre: 'Santy', id:3},
+   {nombre: 'Josu', id:4},
+   {nombre: 'Ema', id:5},
+   {nombre: 'Marce', id:6},
+   {nombre: 'Richard', id:7},
+]
 
-playButton.addEventListener('click', function(){
-   jugar()
-})
+familiares.forEach((familiar)=>{
+   let nombre = document.createElement('p')
+   nombre.textContent = familiar.nombre
+   nombre.setAttribute('class', 'familiar')
+   document.getElementById('leftSection').appendChild(nombre)
+   
+   nombre.addEventListener('click', function(){
+      nombreDuplicado = document.createElement('p')
+      nombreDuplicado.textContent = familiar.nombre
+      nombreDuplicado.setAttribute('class', 'familiar')
 
-function jugar(){
-   let points = 0
-   let gameOver = false
-   let remainingTime = 10
-
-   clickMe.addEventListener('click', function(){
-      points = points + 1
-      score.textContent = 'Score: ' + points
-      clickMe.style.transition = 'all .1 ease'
-      clickMe.style.background = 'red'
+      document.getElementById('rightSection').appendChild(nombreDuplicado)
    })
-
-   const intervalo = setInterval(() => {
-
-      if (remainingTime !== 0){
-         remainingTime = remainingTime - 1
-      }
-      time.innerText = 'Time: ' + remainingTime
-      if(gameOver === true){
-         clearInterval(intervalo)
-      }
-   }, 1000);   
-
-   setTimeout(function(){
-      gameOver = true
-      alert('Game Over')
-   }, 10000)
-}
-
-
+})
